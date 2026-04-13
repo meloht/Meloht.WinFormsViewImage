@@ -119,11 +119,10 @@ namespace Meloht.WinFormsViewImage
             {
                 this.pictureBox1.Image.Dispose();
                 this.pictureBox1.Image = null;
-
-                if (_onImageViewerClose != null)
-                {
-                    _onImageViewerClose(_imagePath);
-                }
+            }
+            if (_onImageViewerClose != null)
+            {
+                _onImageViewerClose(_imagePath);
             }
         }
     }
