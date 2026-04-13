@@ -15,6 +15,8 @@ namespace Meloht.WinFormsViewImage
     public partial class FormShowImage : Form
     {
         private bool isImage = false;
+        private string _imagePath;
+        public Action<string> _onImageViewerClose;
         public FormShowImage()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace Meloht.WinFormsViewImage
         {
             //this.pictureBox1.MouseWheel += PictureBox1_MouseWheel;
             this.Text = fileName;
-
+            _imagePath = null;
 
             if (imgData != null && imgData.Length > 0)
             {
@@ -41,22 +43,23 @@ namespace Meloht.WinFormsViewImage
                 }
             }
         }
-        public FormShowImage(string fileName, string filePath) : this()
+        public FormShowImage(string fileName, string filePath, Action<string> onImageViewerClose = null) : this()
         {
             //this.pictureBox1.MouseWheel += PictureBox1_MouseWheel;
-            InitFilePath(fileName, filePath);
+            InitFilePath(fileName, filePath, onImageViewerClose);
         }
-        public FormShowImage(string filePath) : this()
+        public FormShowImage(string filePath, Action<string> onImageViewerClose = null) : this()
         {
             string fileName = Path.GetFileName(filePath);
 
-            InitFilePath(fileName, filePath);
+            InitFilePath(fileName, filePath, onImageViewerClose);
         }
 
-        private void InitFilePath(string fileName, string filePath)
+        private void InitFilePath(string fileName, string filePath, Action<string> onImageViewerClose)
         {
             this.Text = fileName;
-
+            _imagePath = filePath;
+            _onImageViewerClose = onImageViewerClose;
             if (filePath != null && filePath.Length > 0)
             {
                 isImage = true;
@@ -117,7 +120,11 @@ namespace Meloht.WinFormsViewImage
             {
                 this.pictureBox1.Image.Dispose();
                 this.pictureBox1.Image = null;
-               
+
+                if (_onImageViewerClose != null)
+                {
+                    _onImageViewerClose(_imagePath);
+                }
             }
         }
     }

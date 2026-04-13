@@ -14,10 +14,10 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<Description>WinForms View Image tool</Description>
 	<Authors>meloht</Authors>
-	<Version>1.0.0</Version>
+	<Version>1.0.1</Version>
 	<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	<Copyright>Copyright © meloht</Copyright>
-	<PackageReleaseNotes>WinForms View Image tool 1.0.0</PackageReleaseNotes>
+	<PackageReleaseNotes>WinForms View Image tool 1.0.1 add ViewerClosed action</PackageReleaseNotes>
 
   </PropertyGroup>
 
