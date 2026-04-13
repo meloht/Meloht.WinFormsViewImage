@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Meloht.WinFormsViewImage.Test/Meloht.WinFormsViewImage.Test.csproj" />
+  <Project Path="Meloht.WinFormsViewImage/Meloht.WinFormsViewImage.csproj" />
+</Solution>
