@@ -32,7 +32,6 @@ namespace Meloht.WinFormsViewImage
         {
             //this.pictureBox1.MouseWheel += PictureBox1_MouseWheel;
             this.Text = fileName;
-            _imagePath = null;
 
             if (imgData != null && imgData.Length > 0)
             {
