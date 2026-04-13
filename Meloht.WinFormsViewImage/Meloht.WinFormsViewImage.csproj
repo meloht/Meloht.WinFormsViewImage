@@ -1,10 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0-windows</TargetFramework>
+    <TargetFrameworks>net8.0-windows;net9.0-windows;net10.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+   
+	<Title>Meloht.WinFormsViewImage</Title>
+	<PackageProjectUrl>https://github.com/meloht/Meloht.WinFormsViewImage</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/meloht/Meloht.WinFormsViewImage</RepositoryUrl>
+	<PackageTags>winform;csharp;view-image;dotnet8;dotnet9;dotnet10</PackageTags>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<Description>WinForms View Image tool</Description>
+	<Authors>meloht</Authors>
+	<Version>1.0.0</Version>
+	<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+	<Copyright>Copyright © meloht</Copyright>
+	<PackageReleaseNotes>WinForms View Image tool 1.0.0</PackageReleaseNotes>
+
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

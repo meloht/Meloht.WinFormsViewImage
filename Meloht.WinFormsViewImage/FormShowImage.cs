@@ -15,7 +15,6 @@ namespace Meloht.WinFormsViewImage
     public partial class FormShowImage : Form
     {
         private bool isImage = false;
-        private string _filePath = null;
         public FormShowImage()
         {
             InitializeComponent();
@@ -57,8 +56,6 @@ namespace Meloht.WinFormsViewImage
         private void InitFilePath(string fileName, string filePath)
         {
             this.Text = fileName;
-
-            this._filePath = filePath;
 
             if (filePath != null && filePath.Length > 0)
             {
@@ -120,10 +117,7 @@ namespace Meloht.WinFormsViewImage
             {
                 this.pictureBox1.Image.Dispose();
                 this.pictureBox1.Image = null;
-                if (!string.IsNullOrEmpty(_filePath) && File.Exists(_filePath))
-                {
-                    File.Delete(_filePath);
-                }
+               
             }
         }
     }

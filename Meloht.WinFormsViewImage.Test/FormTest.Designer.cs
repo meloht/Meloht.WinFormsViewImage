@@ -39,9 +39,10 @@
             // 
             textBoxImagePath.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBoxImagePath.Location = new Point(12, 12);
+            textBoxImagePath.Multiline = true;
             textBoxImagePath.Name = "textBoxImagePath";
             textBoxImagePath.ReadOnly = true;
-            textBoxImagePath.Size = new Size(393, 23);
+            textBoxImagePath.Size = new Size(393, 195);
             textBoxImagePath.TabIndex = 0;
             // 
             // btnSelect
