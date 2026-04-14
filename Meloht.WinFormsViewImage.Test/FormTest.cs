@@ -39,5 +39,17 @@ namespace Meloht.WinFormsViewImage.Test
             string fileName = Path.GetFileName(this.textBoxImagePath.Text);
             FormImageViewUtils.Show(fileName, bytes);
         }
+
+        private void btnStream_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.textBoxImagePath.Text))
+            {
+                MessageBox.Show("Please select an image file first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            using FileStream fs = new FileStream(this.textBoxImagePath.Text, FileMode.Open, FileAccess.Read);
+            string fileName = Path.GetFileName(this.textBoxImagePath.Text);
+            FormImageViewUtils.Show(fileName, fs);
+        }
     }
 }

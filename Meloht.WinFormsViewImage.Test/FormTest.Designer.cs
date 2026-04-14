@@ -33,6 +33,7 @@
             btnShow = new Button();
             openFileDialog1 = new OpenFileDialog();
             btnByteShow = new Button();
+            btnStream = new Button();
             SuspendLayout();
             // 
             // textBoxImagePath
@@ -82,11 +83,22 @@
             btnByteShow.UseVisualStyleBackColor = true;
             btnByteShow.Click += btnByteShow_Click;
             // 
+            // btnStream
+            // 
+            btnStream.Location = new Point(526, 70);
+            btnStream.Name = "btnStream";
+            btnStream.Size = new Size(101, 23);
+            btnStream.TabIndex = 4;
+            btnStream.Text = "StreamShow";
+            btnStream.UseVisualStyleBackColor = true;
+            btnStream.Click += btnStream_Click;
+            // 
             // FormTest
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(639, 219);
+            Controls.Add(btnStream);
             Controls.Add(btnByteShow);
             Controls.Add(btnShow);
             Controls.Add(btnSelect);
@@ -104,5 +116,6 @@
         private Button btnShow;
         private OpenFileDialog openFileDialog1;
         private Button btnByteShow;
+        private Button btnStream;
     }
 }

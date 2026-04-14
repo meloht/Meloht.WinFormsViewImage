@@ -13,6 +13,13 @@
             showImage.Show();
         }
 
+
+        public static void Show(string fileName, Stream imgStream)
+        {
+            FormShowImage showImage = new FormShowImage(fileName, imgStream);
+            showImage.Show();
+        }
+
         /// <summary>
         /// Displays an image viewer form for the specified file byte array.
         /// </summary>

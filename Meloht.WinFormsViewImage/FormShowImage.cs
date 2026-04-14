@@ -42,6 +42,15 @@ namespace Meloht.WinFormsViewImage
                 }
             }
         }
+
+        public FormShowImage(string fileName, Stream imgStream) : this()
+        {
+            //this.pictureBox1.MouseWheel += PictureBox1_MouseWheel;
+            this.Text = fileName;
+            isImage = true;
+            this.pictureBox1.Image = Image.FromStream(imgStream);
+        }
+
         public FormShowImage(string fileName, string filePath, Action<string> onImageViewerClose = null) : this()
         {
             //this.pictureBox1.MouseWheel += PictureBox1_MouseWheel;
