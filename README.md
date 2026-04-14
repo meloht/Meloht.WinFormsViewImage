@@ -12,5 +12,9 @@ FormImageViewUtils.Show(this.textBoxImagePath.Text);
 byte[] bytes = File.ReadAllBytes(this.textBoxImagePath.Text);
 string fileName = Path.GetFileName(this.textBoxImagePath.Text);
 FormImageViewUtils.Show(fileName, bytes);
+
+using FileStream fs = new FileStream(this.textBoxImagePath.Text, FileMode.Open, FileAccess.Read);
+string fileName = Path.GetFileName(this.textBoxImagePath.Text);
+FormImageViewUtils.Show(fileName, fs);
 ```
 <img width="832" height="557" alt="image" src="https://github.com/user-attachments/assets/060acef8-8c04-4d9a-8225-9d2b1df67b65" />
